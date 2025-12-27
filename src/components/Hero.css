@@ -1,0 +1,107 @@
+.hero-section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    overflow: hidden;
+    /* Background handled by global layers or NetworkBackground component content */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    max-width: 800px;
+    padding: 0 var(--spacing-md);
+}
+
+.hero-name {
+    font-size: clamp(40px, 8vw, 80px);
+    font-weight: 700;
+    margin-bottom: var(--spacing-xs);
+    background: linear-gradient(90deg, #fff, var(--color-accent-primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 10px rgba(0, 217, 255, 0.3);
+}
+
+.hero-title {
+    font-size: clamp(20px, 4vw, 32px);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-md);
+    font-family: var(--font-mono);
+}
+
+.hero-tagline {
+    font-size: 1.2rem;
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-lg);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.cta-container {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 12px 28px;
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-primary {
+    background: transparent;
+    border: 1px solid var(--color-accent-primary);
+    color: var(--color-accent-primary);
+}
+
+.btn-primary:hover {
+    background: rgba(0, 217, 255, 0.1);
+    box-shadow: 0 0 15px rgba(0, 217, 255, 0.3);
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 1px solid var(--color-text-secondary);
+    color: var(--color-text-secondary);
+}
+
+.btn-secondary:hover {
+    border-color: var(--color-text-primary);
+    color: var(--color-text-primary);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 768px) {
+    .hero-name {
+        font-size: clamp(32px, 10vw, 50px);
+    }
+
+    .cta-container {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-sm);
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
