@@ -12,7 +12,7 @@ export const timelineData = [
     {
         title: "Network Engineer",
         location: "inet infotech",
-        date: "2014 - 2017",
+        date: "2015 - 2017",
         icon: FaNetworkWired,
         iconColor: "#00d9ff",
         description: "Specialized in foundational network protocols, routing strategies, and infrastructure maintenance."
