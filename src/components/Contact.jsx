@@ -154,7 +154,7 @@ const Contact = () => {
                     </a>
                 </div>
                 <div className="contact-email">
-                    <p>For any additional inquiries, you may reach us at this email address.</p>
+                    <p>For any additional inquiries, you may reach me at this email address.</p>
                     <a href="mailto:ajalanjolly4@gmail.com" className="email-link">ajalanjolly4@gmail.com</a>
                 </div>
             </motion.div>
