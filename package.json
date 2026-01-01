@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://alanjolly.github.io/alan-jolly-portfolio",
+  "homepage": "https://alanjolly.in",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
