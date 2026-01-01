@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
+import { FaLinkedin, FaGithub, FaYoutube } from 'react-icons/fa';
 import './Contact.css';
 
 const Contact = () => {
@@ -133,6 +134,30 @@ const Contact = () => {
                     <div ref={bottomRef} />
                 </div>
             </div>
+
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="contact-footer"
+            >
+                <div className="social-links">
+                    <a href="https://www.linkedin.com/in/alan-jolly-172b92187/" target="_blank" rel="noopener noreferrer" className="social-btn linkedin">
+                        <FaLinkedin /> LinkedIn
+                    </a>
+                    <a href="https://github.com/alanjolly" target="_blank" rel="noopener noreferrer" className="social-btn github">
+                        <FaGithub /> GitHub
+                    </a>
+                    <a href="https://www.youtube.com/@alanjolly4" target="_blank" rel="noopener noreferrer" className="social-btn youtube">
+                        <FaYoutube /> YouTube
+                    </a>
+                </div>
+                <div className="contact-email">
+                    <p>For any additional inquiries, you may reach us at this email address.</p>
+                    <a href="mailto:ajalanjolly4@gmail.com" className="email-link">ajalanjolly4@gmail.com</a>
+                </div>
+            </motion.div>
         </section>
     );
 };
