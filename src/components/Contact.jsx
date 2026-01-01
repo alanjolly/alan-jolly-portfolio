@@ -11,11 +11,17 @@ const Contact = () => {
     const inputRef = useRef(null);
     const bottomRef = useRef(null);
 
+    const isFirstRender = useRef(true);
+
     const scrollToBottom = () => {
         bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
 
     useEffect(() => {
+        if (isFirstRender.current) {
+            isFirstRender.current = false;
+            return;
+        }
         scrollToBottom();
     }, [history]);
 
@@ -113,7 +119,6 @@ const Contact = () => {
                             onChange={(e) => setInput(e.target.value)}
                             onKeyDown={handleKeyDown}
                             className="terminal-input"
-                            autoFocus
                         />
                     </div>
                     <div ref={bottomRef} />
